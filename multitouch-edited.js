@@ -351,11 +351,7 @@ AFRAME.registerComponent('multitouch-look-controls', {
       };
     } else if (e.touches.length == 2 ) {
 
-      // Handle the dolly motion. We will look at movement of the mid-point between the two touches.
-      var px = (e.touches[0].pageX + e.touches[1].pageX) / 2;
-      var py = (e.touches[0].pageY + e.touches[1].pageY) / 2;
-      var dist = Math.sqrt(  (e.touches[0].pageX - e.touches[1].pageX) * (e.touches[0].pageX - e.touches[1].pageX) +
-        (e.touches[0].pageY - e.touches[1].pageY) * (e.touches[0].pageY - e.touches[1].pageY));
+      
 
       if (!isFinite(this.touchStart.dist)) this.touchStart.dist = dist;
 
